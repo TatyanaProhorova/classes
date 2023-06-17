@@ -1,23 +1,41 @@
 {
-  "name": "@tatyanaprohorova/classes",
+  "name": "@tatyanaprohorova/method_for_classes",
   "version": "1.0.0",
-  "description": "first package sructure based on classes",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint .",
+    "start": "node ./src/index.js",
+    "coverage": "jest --coverage",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TatyanaProhorova/classes.git"
+    "url": "git+https://github.com/TatyanaProhorova/method_for_classes.git"
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
-    "url": "https://github.com/TatyanaProhorova/classes/issues"
+    "url": "https://github.com/TatyanaProhorova/method_for_classes/issues"
   },
-  "homepage": "https://github.com/TatyanaProhorova/classes#readme",
+  "homepage": "https://github.com/TatyanaProhorova/method_for_classes#readme",
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "jest": "^29.3.1",
+    "jest-cli": "^29.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "core-js": "^3.27.1"
   }
 }
